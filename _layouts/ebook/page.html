@@ -7,9 +7,9 @@
     {### Include theme css before plugins css ###}
     {% if not fileExists(config.styles.print) %}
         {% if options.format %}
-        <link rel="stylesheet" href="{{ (options.format + ".css")|resolveAsset }}">
+        <link rel="stylesheet" href="{{ ("styles/" + options.format + ".css")|resolveAsset }}">
         {% else %}
-        <link rel="stylesheet" href="{{ "ebook.css"|resolveAsset }}">
+        <link rel="stylesheet" href="{{ "styles/ebook.css"|resolveAsset }}">
         {% endif %}
     {% endif %}
 
