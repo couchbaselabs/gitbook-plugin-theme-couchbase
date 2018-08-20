@@ -20,7 +20,7 @@
     "uglify-js": "2.7.3"
   },
   "scripts": {
-    "postinstall": "./build.sh"
+    "prerelease": "./build.sh"
   },
   "repository": {
     "type": "git",
