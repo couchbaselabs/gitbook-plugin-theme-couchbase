@@ -7,7 +7,7 @@ rm -rf _assets
 mkdir -p _assets/website/images/icons/
 mkdir -p _assets/website/styles/fonts/fontawesome/
 mkdir -p _assets/website/js/
-mkdir -p _assets/ebook/styles
+mkdir -p _assets/ebook/styles/
 mkdir -p _assets/ebook/images/
 
 # Compile JS
@@ -24,7 +24,7 @@ lessc -clean-css src/less/mobi.less _assets/ebook/styles/mobi.css
 lessc -clean-css src/less/epub.less _assets/ebook/styles/epub.css
 
 # Copy fonts
-cp -R node_modules/font-awesome/fonts/ _assets/website/styles/fonts/fontawesome/
+cp -R node_modules/font-awesome/fonts/. _assets/website/styles/fonts/fontawesome
 
 # Copy icons
 cp -R _img/icons _assets/website/images/icons
