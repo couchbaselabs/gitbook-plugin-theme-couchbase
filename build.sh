@@ -15,11 +15,11 @@ browserify src/js/core/index.js | uglifyjs -mc > _assets/website/js/gitbook.js
 browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/js/theme.js
 
 # Compile Website CSS
-lessc src/less/website.less _assets/website/styles/site.css
+lessc -clean-css  src/less/website.less _assets/website/styles/site.css
 
 # Compile eBook CSS
-lessc src/less/ebook.less _assets/ebook/styles/ebook.css
-lessc src/less/pdf.less _assets/ebook/styles/pdf.css
+lessc -clean-css  src/less/ebook.less _assets/ebook/styles/ebook.css
+lessc -clean-css  src/less/pdf.less _assets/ebook/styles/pdf.css
 lessc -clean-css src/less/mobi.less _assets/ebook/styles/mobi.css
 lessc -clean-css src/less/epub.less _assets/ebook/styles/epub.css
 
