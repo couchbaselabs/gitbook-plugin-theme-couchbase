@@ -1,6 +1,7 @@
 /* add logo */
-body {
-  font-size: 15px;
+html body {
+  font-size: 14px;
+  letter-spacing: normal;
 }
 .page-inner {
   .markdown-section {
@@ -42,7 +43,86 @@ html {
     }
   }
 }
+
+.book-body .markdown-section {
+  line-height: 1.3em;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Gotham, Arial;
+  }
+  h4, h5, h6 {
+    font-weight: 500;
+  }
+  h1 {
+    line-height: 1.65em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  h3 {
+    font-size: 1.3em;
+    line-height: 1.2em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  h5, h6 {
+    font-size: 1em;
+  }
+
+  p > code {
+    font-size: .8em;
+    padding: 0 0 1px;
+  }
+  code, pre {
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+  }
+
+  pre {
+    font-size: .9em;
+    line-height: 1.3em;
+  }
+
+  ul li {
+    line-height: 1.4em;
+  }
+
+  table {
+    td, th {
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px;
+    }
+    th {
+      border-top: none;
+      border-bottom: 2px solid #F75661;
+      background: none;
+    }
+    tr {
+      border: none;
+      &:nth-child(2n) {
+        background-color: #fafafa;
+      }
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
 .page .section pre > code {
   font-size: .95em;
   white-space: pre-wrap;
+}
+
+.book .book-summary {
+  background-color: #f9f9f9;
+  ul.summary li a, ul.summary li span {
+    font-family: Gotham, Arial;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 9px 15px;
+  }
 }

@@ -1,4 +1,4 @@
-.page {
+body .page {
   .section {
     em {
       color: #787878;
@@ -7,12 +7,29 @@
       color: @link-color;
     }
     table {
+      border: none;
       td, th {
-        border: 1px solid #ccc;
+        border-left: none;
+        border-right: none;
+        padding: 10px;
+      }
+      td {
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
       }
       th {
-        background: #f6fafd;
-        padding: 8px 13px;
+        border-top: none;
+        border-bottom: 2px solid #F75661;
+        background: none;
+      }
+      tr {
+        border: none;
+        &:nth-child(2n) {
+          background-color: #fafafa;
+        }
+        &:last-child td {
+          border-bottom: none;
+        }
       }
     }
     h1 {
@@ -23,6 +40,17 @@
         padding-bottom: .35em;
       }
     }
+    &.toc {
+      font-family: Gotham, Arial;
+      font-weight: 600;
+      font-size: 16px;
+      a {
+        padding: 15px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    }
     &.toc h1:first-child {
       display: none;
     }
@@ -31,13 +59,44 @@
 
 html {
   .markdown-section, .page .section, .section {
+    line-height: 1.2em;
+    p {
+      line-height: 1.3em;
+    }
+    p > code {
+      font-size: .9em;
+      padding: 0 0 1px;
+    }
     code, pre {
       font-family: "Liberation Mono",Consolas,Menlo,Courier,monospace;
-      font-size: 1.1em;
-      line-height: 1.5em;
+      background-color: #f6f6f6;
+      border: 1px solid #e5e5e5;
     }
-    code {
-      font-size: 1.0em;
+    pre {
+      line-height: 1.3em;
+      font-size: 1em;
+    }
+    ul li {
+      line-height: 1.4em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Gotham, Arial;
+    }
+    h4, h5, h6 {
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 1.7em;
+    }
+    h3 {
+      font-size: 1.3em;
+      line-height: 1.2em;
+    }
+    h4 {
+      font-size: 1.2em;
+    }
+    h5, h6 {
+      font-size: 1em;
     }
   }
 }
