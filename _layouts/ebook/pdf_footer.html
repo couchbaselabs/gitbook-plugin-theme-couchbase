@@ -2,7 +2,11 @@
 
 {% block body %}
 <div class="pdf-footer">
-    <span>{{ config.team|d("Couchbase Professional Services", true) }} {{ page.section }}</span>
-    <span class="footer-pages-count">{{ page.num }}</span>
+    <table>
+      <tr>
+        <td>{{ config.team|d("Couchbase Professional Services", true) }} {{ page.section }}</td>
+        <td class="footer-pages-count">{{ page.num }}</td>
+      </tr>
+    </table>
 </div>
 {% endblock %}
